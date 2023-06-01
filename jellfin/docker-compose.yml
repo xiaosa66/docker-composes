@@ -1,0 +1,18 @@
+version: "3.5"
+services:
+  jellyfin:
+    image: nyanmisaka/jellyfin:latest
+    devices:
+      - /dev/dri:/dev/dri
+    container_name: jellyfin_server
+    volumes:
+      - /home/xiaosa/server/jellfin/cache:/cache
+      - /home/xiaosa/server/jellfin/config:/config
+      - /mnt/ub/video:/media/video
+      - /home/xiaosa/server/jellfin/utils:/utils
+    ports:
+      - "8096:8096"
+    environment:
+      JELLYFIN_PublishedServerUrl: "http://localhost"
+
+

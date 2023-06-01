@@ -1,0 +1,6 @@
+jellfin/cache/*
+jellfin/config/*
+jellfin/utils/*
+nginx/html/*
+nginx/logs/*
+hass/config/*

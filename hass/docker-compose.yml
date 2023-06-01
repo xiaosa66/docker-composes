@@ -1,0 +1,12 @@
+version: "3.5"
+services:
+  jellyfin:
+    image: homeassistant/home-assistant
+    network_mode: host
+    devices:
+      - /dev/dri:/dev/dri
+    container_name: hass
+    volumes:
+      - /home/xiaosa/server/hass/config:/config
+
+

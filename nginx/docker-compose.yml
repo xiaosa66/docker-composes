@@ -1,0 +1,18 @@
+version: "3.5"
+services:
+  nginx:
+    image: nginx:latest
+    # devices:
+    #   - /dev/dri:/dev/dri
+    container_name: nginx
+    volumes:
+      - /home/xiaosa/server/nginx/html:/var/www/html
+      - /home/xiaosa/server/nginx/conf/nginx.conf:/etc/nginx/nginx.conf
+      - /home/xiaosa/server/nginx/conf.d:/etc/nginx/conf.d
+      - /home/xiaosa/server/nginx/logs:/var/log/nginx
+
+    ports:
+      - "1080:80"
+    # environment:
+    #   JELLYFIN_PublishedServerUrl: "http://localhost"
+
